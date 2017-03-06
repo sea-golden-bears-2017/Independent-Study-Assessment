@@ -119,16 +119,6 @@ On the page showing an item's details, add a bidding section.  Include the numbe
 *Figure 8*.  Bidding on an item unsuccessfully and then successfully.
 
 
-### Release 9:  Refine Bidding
-In a previous release you controlled for who was able to create, update, and delete items.  Refine bidding in the same way.  Again, you'll need to make choices and be prepared to explain your reasoning.  Use your best judgement to make any appropriate code changes.
-
-Consider:
-* Should everyone be allowed to bid or only logged in users?
-* Should users be allowed to bid on their own items?
-* Should users be allowed to edit or delete their bids?
-* Should bids be accepted before an auction starts or after it ends?
-
-
 ## Conclusion
 
 Part-3 wraps up the assessment.  If you haven't already done so, commit your
