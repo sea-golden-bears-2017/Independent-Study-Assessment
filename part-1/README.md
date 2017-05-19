@@ -24,24 +24,6 @@ will be failing.  Start by fixing the first test in `spec/student_spec.js`. To
 make the test in `spec/student_spec.js` pass you will make edits to
 `student.js`. Continue onward by fixing the remaining tests.
 
-You are also provided an English-language version of the tests below. We
-recommend you carefully read the spec files and English-language requirements
-to determine the code you need to write.
-
-#### Context
-
-Assume we create an instance of `Student` that is initialized with a first name
-and an `Array` of numbers representing their grades. You may assume this
-happens before each test.
-
-#### Tests
-
-* The new instance's first name matches the one that was passed in during initialization
-* The new instance's `scores` Array has the same scores as the scores that were passed in during initialization
-* The new instance can return an average score value that is computed based on the content of the scores that were passed in during initialization
-* The new instance can return a letter grade that is based on interpreting the average score value
-
-Once all the tests are passing, you're done!
 
 ### Release 1: Classroom
 
