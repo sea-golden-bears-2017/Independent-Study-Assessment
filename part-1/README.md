@@ -10,23 +10,18 @@ We'll run the tests in the browser by opening the file `SpecRunner.html`, which 
 ```
 $ open SpecRunner.html
 ```
+
 ... which should open the HTML file in the default browser.  As you make changes to the JavaScript code, refresh the page to rerun the tests.
 
 
 ## Releases
 ### Release 0: Student
-
-We'll start by focusing on the tests describing our student (see
-`spec/student_spec.js`).  All of them will be failing.  Start by fixing the first test in `spec/student_spec.js`. To make the test in `spec/student_spec.js` pass you will make edits to `student.js`. Continue onward by fixing the remaining tests.
+We'll start by building a student object.  The tests that describe students are in the file `spec/student_spec.js`.  Write your code in the file `student.js`.
 
 
 ### Release 1: Classroom
-
 Once the tests for the custom student object pass, move on to the classroom
-object type.  Just as above, start by fixing the first test in
-`spec/classroom_spec.js`. To make the test in `spec/classroom_spec.js` pass you
-will make edits to `classroom.js`. Continue onward by fixing the remaining
-tests.
+object type.  The tests that describe a classroom are in the file `spec/classroom_spec.js`.  Write your code in the file `classroom.js`.
 
 
 ## Conclusion
