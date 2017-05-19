@@ -25,6 +25,8 @@ It is required to use a `for` loop to iterate over an array in *Release 0*.
 Once the tests for the custom student object pass, move on to the classroom
 object type.  The tests that describe a classroom are in the file `spec/classroom_spec.js`.  Write your code in the file `classroom.js`.
 
+It is required to use `Array.prototype` methods to iterate over an array in *Release 1*.
+
 
 ## Conclusion
 
