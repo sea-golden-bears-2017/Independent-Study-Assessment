@@ -18,6 +18,8 @@ $ open SpecRunner.html
 ### Release 0: Student
 We'll start by building a student object.  The tests that describe students are in the file `spec/student_spec.js`.  Write your code in the file `student.js`.
 
+It is required to use a `for` loop to iterate over an array in *Release 0*.
+
 
 ### Release 1: Classroom
 Once the tests for the custom student object pass, move on to the classroom
