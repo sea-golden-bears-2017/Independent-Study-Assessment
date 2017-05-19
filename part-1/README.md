@@ -4,25 +4,20 @@ In Part 1 of the assessment, we're going to write JavaScript.  Specifically, we'
 
 
 ### Running Jasmine Tests
-We won't run the tests from the command line.  Instead we'll run them in the browser, by opening the file `SpecRunner.html`.  This HTML file loads the Jasmine JavaScript library, the application code that we'll write, and the files containing the tests.  It runs the tests and then displays the outcome of the tests in the browser.
-
-## Releases
-### Release 0: Student
-
-We'll start by focusing on the tests describing our student (see
-`spec/student_spec.js`).  To run the tests, open the file `SpecRunner.html` in
-a browser. On the command line navigate to the `part-1` directory and then run
+We'll run the tests in the browser by opening the file `SpecRunner.html`, which runs the tests and displays the results.  On the command line navigate to the `part-1` directory and then run
 ...
 
 ```
 $ open SpecRunner.html
 ```
-... this should open the HTML file in the default browser.
+... which should open the HTML file in the default browser.  As you make changes to the JavaScript code, refresh the page to rerun the tests.
 
-When the page loads, the tests in `spec/student_spec.js` will run. All of them
-will be failing.  Start by fixing the first test in `spec/student_spec.js`. To
-make the test in `spec/student_spec.js` pass you will make edits to
-`student.js`. Continue onward by fixing the remaining tests.
+
+## Releases
+### Release 0: Student
+
+We'll start by focusing on the tests describing our student (see
+`spec/student_spec.js`).  All of them will be failing.  Start by fixing the first test in `spec/student_spec.js`. To make the test in `spec/student_spec.js` pass you will make edits to `student.js`. Continue onward by fixing the remaining tests.
 
 
 ### Release 1: Classroom
