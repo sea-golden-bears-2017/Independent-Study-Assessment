@@ -18,7 +18,7 @@ describe("Classroom", function() {
   });
 
   it("has students", function() {
-    expect(classroom.students).toEqual([jalil, irene, kelvin, myra]);
+    expect(classroom.students).toEqual(students);
   });
 
   it("finds a student by the student's first name", function() {
