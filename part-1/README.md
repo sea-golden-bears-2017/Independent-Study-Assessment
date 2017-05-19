@@ -34,29 +34,6 @@ will make edits to `classroom.js`. Continue onward by fixing the remaining
 tests.
 
 
-You are also provided an English-language version of the tests below:
-
-#### Context
-
-Assume that four `Student`s are created. A new instance of `Classroom` is
-initialized with an Array of these `Student`s.  You may assume this
-initialization happens before each test.
-
-
-You are also provided an English-language version of the tests below:
-
-#### Context
-
-Assume we create an instance of `Student` that is initialized with a first name
-and an `Array` of numbers representing their grades. You may assume this
-happens before each test.
-
-#### Tests
-
-* The new instance's `students` Array has the same scores as the scores that were passed in during initialization
-* The new instance's method `find` searches through the `students` array to find the one whose first name matches
-* The new instance's method `honorRollStudents` searches through the `students` array to find the one whose average score is 95 or greater
-
 ## Conclusion
 
 Once all the tests have passed, you have completed Part 1 of the assessment. If
