@@ -25,7 +25,7 @@ describe("Classroom", function() {
     expect(classroom.find("Myra")).toEqual(myra);
   });
 
-  describe("identifyies honor roll students", function() {
+  describe("identifies honor roll students", function() {
     it("returns only its students with average scores of 95 or greater", function() {
       expect(classroom.honorRollStudents()).toEqual(jasmine.arrayContaining([irene, jalil]));
       expect(classroom.honorRollStudents()).not.toEqual(jasmine.arrayContaining([kelvin, myra]));
