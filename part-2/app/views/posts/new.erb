@@ -8,6 +8,6 @@
     others who might stay at Paradise Isle Hostel.
   </p>
 
-  <%= erb :"posts/_errors", { layout: false, locals: { errors: @post.errors.values.flatten } } %>
+  <%= erb :"posts/_errors", { locals: { errors: @post.errors.values.flatten } } if !errors.empty? %>
   <%= erb :'posts/_form', { layout: false, locals: { post: @post } } %>
 </section>
