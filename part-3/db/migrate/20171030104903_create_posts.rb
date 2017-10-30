@@ -1,7 +1,7 @@
 class CreatePosts < ActiveRecord::Migration
   def change
     create_table :posts do |t|
-      t.belongs_to :users, index: true
+      t.belongs_to :user, index: true
       t.string :title, null: false
       t.string :description, null: false
       t.string :condition, null: false
