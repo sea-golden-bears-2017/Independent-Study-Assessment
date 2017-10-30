@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- 
+  <!--
     normalize.css removes cross-browser differences in defaults, e.g.,
     differences in how form elements appear between Firefox and IE
     See: http://necolas.github.com/normalize.css/
@@ -15,9 +15,36 @@
   <script src="/js/jquery.js"></script>
   <script src="/js/application.js"></script>
 
-  <title></title>
+  <title>DBCeebay</title>
 </head>
 <body>
+  <header class="navbar">
+    <div class="container">
+
+      <ul class="nav">
+        <li><a href="/">Home</a></li>
+
+        <% if session[:id] %>
+
+        <li>
+          <form class="logout-form" action="/sessions" method="post">
+            <input type="hidden" name="_method" value="delete">
+            <input type="submit" value="Logout">
+          </form>
+        </li>
+        <li><a href="/user/<%= session[:id] %>">Profile</a></li>
+
+        <% else %>
+
+        <li><a href="/sessions">Login</a></li>
+        <li><a href="/user/new">Register</a></li>
+
+        <% end %>
+      </ul>
+
+    </div>
+  </header>
+
   <%= yield %>
 </body>
 </html>
