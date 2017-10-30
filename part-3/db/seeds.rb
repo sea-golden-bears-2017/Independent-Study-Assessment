@@ -10,6 +10,6 @@ end
 
 users.each do |user|
   15.times do
-    user.posts << Post.create!(title: Faker::Lorem.word, description: Faker::Lorem.paragraph(5), condition: Faker::Lorem.sentence, price: Faker::Number.number(2))
+    user.posts << Post.create!(title: Faker::Lorem.sentence, description: Faker::Lorem.paragraph(5), condition: Faker::Lorem.sentence, price: Faker::Number.number(2))
   end
 end

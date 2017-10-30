@@ -1,5 +1,5 @@
 <div class="container">
-  <h1>Welcome, <%= @user.first_name %> <%= @user.last_name %></h1>
+  <h1>Welcome, <%= @user.user_name %></h1>
 </div>
 
 <div class="container">
@@ -7,7 +7,7 @@
   <ul>
     <% @user.posts.each do | post | %>
     <li>
-      <a href="/posts/<%= post.id %>"><%= post.title %></a>
+      <p><a href="/posts/<%= post.id %>"><%= post.title %></a></p>
     </li>
     <% end %>
   </ul>

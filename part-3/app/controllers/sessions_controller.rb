@@ -6,7 +6,7 @@ post '/sessions' do
   if @user = User.find_by_email(params[:email])
     if @user.password == params[:password]
       session[:id] = @user.id
-      redirect "/user/#{@user.id}"
+      redirect "/users/#{@user.id}"
     else
       redirect '/sessions'
     end
