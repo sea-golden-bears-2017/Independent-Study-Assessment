@@ -1,5 +1,5 @@
 <div class="container">
-  <h1>Edit Auction</h1>
+  <h1>Confirm Auction</h1>
 </div>
 
 <div class="container">
@@ -26,13 +26,13 @@
       <input type="datetime-local" name="post[end]" value="<%= @post.end %>">
     </label></p>
 
-    <p><input type="submit" name="submit" value="Submit Edits"></p>
+    <p><input type="submit" name="submit" value="Create Auction"></p>
   </form>
 
   <form class="delete-post-form" action="/posts/<%= @post.id %>" method="post">
     <input type="hidden" name="_method" value="delete">
-    <input type="submit" name="submit" value="Cancel Submission">
+    <input type="submit" name="submit" value="Cancel Auction">
   </form>
 
-
+  <h1>Does everything look correct?</h1>
 </div>

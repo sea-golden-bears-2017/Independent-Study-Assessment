@@ -7,8 +7,27 @@
   <ul>
     <% @user.posts.each do | post | %>
     <li>
-      <p><a href="/posts/<%= post.id %>"><%= post.title %></a></p>
+      <a href="/posts/<%= post.id %>"><%= post.title %></a>
+      <% if session[:id] == @user.id %>
+        <a href="/posts/<%= post.id %>/edit">Edit</a>
+        <form class="delete-post" action="/posts/<%= post.id %>" method="post">
+          <input type="hidden" name="_method" value="delete">
+          <input type="submit" name="submit" value="Delete">
+        </form>
+      <% end %>
     </li>
     <% end %>
   </ul>
+
+
+  <% if session[:id] == @user.id %>
+    <a href="/posts/new">New Post</a>
+  <% end %>
+
 </div>
+
+<% if session[:id] && session[:id] != @user.id %>
+  <div class="bid-partial">
+    <%= erb :"posts/_bid", layout: false %>
+  </div>
+<% end %>

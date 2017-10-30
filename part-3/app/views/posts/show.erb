@@ -1,30 +1,12 @@
 <div class="container">
   <h1>Title: <%= @post.title %></h1>
-  <h1>User: <%= @post.user.user_name %></h1>
+  <h3>User: <a href="/users/<%= @post.user.id %>"><%= @post.user.user_name %></a></h3>
 </div>
 
-
-<% if session[:id] %>
-  <div class="container">
-    <% if @user.posts.exists?(@post.id) %>
-    <p>
-      <form class="sub-form" action="/posts/<%= @post.id %>" method="post">
-        <input type="hidden" name="_method" value="delete">
-        <input type="submit" value="Unsubscribe">
-      </form>
-    </p>
-    <% else %>
-    <p>
-      <form class="sub-form" action="/posts/<%= @post.id %>" method="post">
-        <input type="submit" value="Subscribe">
-      </form>
-    </p>
-    <% end %>
-  </div>
-<% else %>
 
 <div class="container">
-  <h3>Login to Bid!</h3>
+  <h3>Description: <%= @post.description %></h3>
+  <h3>Condition: <%= @post.condition %></h3>
+  <h3>Auction ends on <%= @post.price %></h3>
+  <h3>Current Price: <%= @post.price %></h3>
 </div>
-
-<% end %>
