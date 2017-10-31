@@ -9,5 +9,7 @@
   </p>
 
   <%= erb :"posts/_errors", { locals: { errors: @post.errors.values.flatten } } if !errors.empty? %>
+
   <%= erb :'posts/_form', { layout: false, locals: { post: @post } } %>
+
 </section>
