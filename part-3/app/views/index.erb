@@ -1,0 +1,21 @@
+<div class="container">
+  <h1>DBC Auction!</h1>
+</div>
+
+<div class="container">
+<h1>Active Auctions:</h1>
+
+  <ul>
+  <% @posts.each do |post| %>
+    <li>
+      <div>
+        <h3><a href="/posts/<%= post.id %>"><%= post.title %></a></h3>
+        <p>
+          <a href="/users/<%= post.user.id %>"><%= post.user.user_name %></a>
+        </p>
+      </div>
+    </li>
+  <% end %>
+  </ul>
+
+</div>

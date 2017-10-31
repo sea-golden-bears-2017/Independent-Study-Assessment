@@ -1,0 +1,35 @@
+<div class="container">
+  <h1>Edit Auction</h1>
+</div>
+
+<div class="container">
+  <form class="confirm-art-form" action="/posts/<%= @post.id %>" method="post">
+    <input type="hidden" name="_method" value="put">
+
+    <p><label>Title:
+      <input type="text" name="post[title]" value="<%= @post.title %>">
+    </label></p>
+
+    <p><label>Description:
+      <input type="text" name="post[description]" value="<%= @post.description %>">
+    </label></p>
+
+    <p><label>Condition:
+      <input type="text" name="post[condition]" value="<%= @post.condition %>">
+    </label></p>
+
+    <p><label>Start Time:
+      <input type="datetime-local" name="post[start]" value="<%= @post.start %>">
+    </label></p>
+
+    <p><label>End Time:
+      <input type="datetime-local" name="post[end]" value="<%= @post.end %>">
+    </label></p>
+
+    <p><input type="submit" name="submit" value="Submit Edits"></p>
+  </form>
+
+
+  <a href="/users/<%= session[:id] %>">Cancel</a>
+
+</div>

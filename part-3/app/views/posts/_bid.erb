@@ -1,0 +1,12 @@
+<h1>Bidding</h1>
+<h3>Number of Bidders: <%= @post.bids.length %></h3>
+
+<form action="/bids" method="post">
+
+  <label>Bid Amount:
+    <input type="number" name="bid[amount]" value="">
+  </label>
+
+  <input type="submit" value="Place Bid">
+
+</form>
