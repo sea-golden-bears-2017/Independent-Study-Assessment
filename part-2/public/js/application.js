@@ -11,7 +11,7 @@ $(document).ready(function() {
     });
   });
 
-  $("article").on("submit", (e) => {
+  $("#post-list").on("submit", (e) => {
     e.preventDefault();
     console.log("prevented default")
     const url = $(e.target, "form").attr("action")
