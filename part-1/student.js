@@ -18,13 +18,13 @@ class Student {
     if (this.averageScore() >= 90) {
       return "A"
     }
-    else if (this.averageScore() <= 90 && this.averageScore() >= 80) {
+    else if (this.averageScore() >= 80) {
       return "B"
     }
-    else if (this.averageScore() <= 80 && this.averageScore() >= 70) {
+    else if (this.averageScore() >= 70) {
       return "C"
     }
-    else if (this.averageScore() <= 70 && this.averageScore() >= 60) {
+    else if (this.averageScore() >= 60) {
       return "D"
     } else {
       return "F"

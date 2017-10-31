@@ -9,14 +9,14 @@ class Classroom {
   }
 
   find(studentName) {
-    nameFunction(pupil) => {
+    let nameFunction = (pupil) => {
       return pupil.firstName === studentName
-    };
+    }
     return this.students.find(nameFunction)
   }
 
   honorRollStudents() {
-    // return array of student objects
+    return this.students.filter(pupils => pupils.averageScore() >= 95)
   }
 
 }
