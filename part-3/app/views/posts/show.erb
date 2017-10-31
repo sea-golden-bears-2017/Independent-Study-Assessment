@@ -7,6 +7,12 @@
 <div class="container">
   <h3>Description: <%= @post.description %></h3>
   <h3>Condition: <%= @post.condition %></h3>
-  <h3>Auction ends on <%= @post.price %></h3>
-  <h3>Current Price: <%= @post.price %></h3>
+  <h3>Auction starts on: <%= @post.start %></h3>
+  <h3>Auction ends on: <%= @post.end %></h3>
 </div>
+
+<% if session[:id] && session[:id] != @post.user_id %>
+  <div class="bid-partial">
+    <%= erb :"posts/_bid", layout: false %>
+  </div>
+<% end %>

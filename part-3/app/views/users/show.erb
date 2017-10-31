@@ -25,9 +25,3 @@
   <% end %>
 
 </div>
-
-<% if session[:id] && session[:id] != @user.id %>
-  <div class="bid-partial">
-    <%= erb :"posts/_bid", layout: false %>
-  </div>
-<% end %>

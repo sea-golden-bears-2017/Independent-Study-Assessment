@@ -19,11 +19,11 @@
     </label></p>
 
     <p><label>Start Time:
-      <input type="datetime-local" name="post[start]" value="<%= @post.start %>">
+      <input type="text" name="post[start]" value="<%= @post.start.to_s %>">
     </label></p>
 
     <p><label>End Time:
-      <input type="datetime-local" name="post[end]" value="<%= @post.end %>">
+      <input type="text" name="post[end]" value="<%= @post.end.to_s %>">
     </label></p>
 
     <p><input type="submit" name="submit" value="Create Auction"></p>

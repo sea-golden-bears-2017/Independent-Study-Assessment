@@ -7,7 +7,7 @@ class CreatePosts < ActiveRecord::Migration
       t.string :condition, null: false
       t.datetime :start, null: false
       t.datetime :end, null: false
-      t.string :price
+      t.decimal :price
 
       t.timestamps
     end

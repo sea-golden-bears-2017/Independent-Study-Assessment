@@ -29,10 +29,7 @@
     <p><input type="submit" name="submit" value="Submit Edits"></p>
   </form>
 
-  <form class="delete-post-form" action="/posts/<%= @post.id %>" method="post">
-    <input type="hidden" name="_method" value="delete">
-    <input type="submit" name="submit" value="Cancel Submission">
-  </form>
 
+  <a href="/users/<%= session[:id] %>">Cancel</a>
 
 </div>
