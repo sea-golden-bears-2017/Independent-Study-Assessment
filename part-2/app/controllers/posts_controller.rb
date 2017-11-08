@@ -6,12 +6,19 @@ end
 post "/posts" do
   @post = Post.new(params[:post])
 
-  if @post.save
-    redirect "posts/#{@post.id}"
+  if request.xhr?
+    if @post.save
+      erb :"posts/_post", {locals: { post: @post }, layout: false }
+    end
   else
-    erb :"posts/new"
+    if @post.save
+      redirect "posts/#{@post.id}"
+    else
+      erb :"posts/new"
+    end
   end
 end
+
 
 get "/posts/new" do
   @post = Post.new
