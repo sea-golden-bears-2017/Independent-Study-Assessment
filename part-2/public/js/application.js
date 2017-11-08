@@ -14,9 +14,19 @@ $(document).ready(() => {
     });
   });
 
-  $('.new-post-like-form').on('submit', (e) =>{
+  // $('#comments').on('submit', '#likes-form', (e) => {
+  $("#post-list").on("submit", (e) => {
     e.preventDefault();
-  })
+    const url = $(e.target).attr('action');
+    const post = $(e.target);
+    $.ajax({
+      url: url,
+      method: 'PUT'
+    }).done((response) => {
+      // $(e.target).closest('article').find('.post-detail').find('#post-likes').text(response)
+      post.closest("article").html(response);
+    });
+  });
 
 
 
