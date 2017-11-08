@@ -7,4 +7,9 @@ class Classroom {
     this.students = students;
   }
 
+  find (name) {
+    return this.students.find(student => student.firstName === name);
+  }
+
+
 } //end of class
