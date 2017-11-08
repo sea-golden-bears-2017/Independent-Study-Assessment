@@ -30,5 +30,3 @@ class Student {
   }
 
 } //end of class
-
-window.Student = Student
