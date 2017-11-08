@@ -15,6 +15,4 @@ class Classroom {
     return this.students.filter(student => student.averageScore() >= 95);
   }
 
-
-
 } //end of class
