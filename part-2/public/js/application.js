@@ -10,6 +10,7 @@ $(document).ready(() => {
       method: 'POST'
     }).done((response) => {
       $('ul#post-list').prepend(`<li> ${response}</li>`);
+      $('#new-post-form')[0].reset();
     });
   });
 })
