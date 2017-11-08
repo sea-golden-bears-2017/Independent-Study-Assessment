@@ -13,4 +13,11 @@ $(document).ready(() => {
       $('#new-post-form')[0].reset();
     });
   });
+
+  $('.new-post-like-form').on('submit', (e) =>{
+    e.preventDefault();
+  })
+
+
+
 })
