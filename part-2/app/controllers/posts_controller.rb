@@ -14,6 +14,7 @@ post "/posts" do
     if @post.save
       redirect "posts/#{@post.id}"
     else
+      @errors = @post.errors.values.flatten
       erb :"posts/new"
     end
   end

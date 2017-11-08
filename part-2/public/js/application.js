@@ -21,7 +21,7 @@ $(document).ready(() => {
     const post = $(e.target);
     $.ajax({
       url: url,
-      method: 'PUT'
+      method: 'PUT',
     }).done((response) => {
       // $(e.target).closest('article').find('.post-detail').find('#post-likes').text(response)
       post.closest("article").html(response);
