@@ -24,7 +24,7 @@ $(document).ready(() => {
       method: 'PUT',
     }).done((response) => {
       // $(e.target).closest('article').find('.post-detail').find('#post-likes').text(response)
-      post.closest("article").html(response);
+      post.closest("article").replaceWith(response);
     });
   });
 
