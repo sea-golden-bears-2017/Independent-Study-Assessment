@@ -18,3 +18,15 @@ post '/auctions' do
     erb :"auctions/new"
   end
 end
+
+get '/auctions/:id/edit' do
+  @auction = Auction.find(params[:id])
+  erb :"auctions/edit"
+end
+
+put '/auctions/:id' do
+  @user = User.find(session[:user_id])
+  @auction = Auction.find(params[:id])
+  @auction.update(params[:auction])
+  redirect "/users/#{@user.id}"
+end
