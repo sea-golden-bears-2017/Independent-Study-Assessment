@@ -9,11 +9,6 @@ class User < ActiveRecord::Base
   validates :hashed_password, presence: true
 
 
-
-
-
-
-
   def password
     @password ||= BCrypt::Password.new(hashed_password)
   end
