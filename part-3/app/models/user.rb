@@ -1,6 +1,9 @@
 require 'bcrypt'
 
 class User < ActiveRecord::Base
+  include BCrypt
+  has_many :auctions
+
   validates :email, presence: true, uniqueness: true
   validates :username, presence: true, uniqueness: true
   validates :hashed_password, presence: true
@@ -19,5 +22,5 @@ class User < ActiveRecord::Base
     @password = BCrypt::Password.create(new_password)
     self.hashed_password = @password
   end
-  
+
 end
