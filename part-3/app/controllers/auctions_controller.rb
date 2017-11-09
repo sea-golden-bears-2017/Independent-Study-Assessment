@@ -16,6 +16,7 @@ end
 
 get '/auctions/:id' do
    @auction = Auction.find(params[:id])
+   @bids = @auction.bids
    erb :"auctions/show"
 end
 
