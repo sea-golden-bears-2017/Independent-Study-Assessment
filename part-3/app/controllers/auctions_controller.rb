@@ -4,7 +4,12 @@ get 'auctions' do
 end
 
 get '/auctions/new' do
+  if session[:user_id]
     erb :"/auctions/new"
+  else
+    status 401
+    erb :"/errors/401"
+  end
 end
 
 post '/auctions' do
@@ -20,8 +25,13 @@ post '/auctions' do
 end
 
 get '/auctions/:id/edit' do
-  @auction = Auction.find(params[:id])
-  erb :"auctions/edit"
+  if session[:user_id]
+    @auction = Auction.find(params[:id])
+    erb :"auctions/edit"
+  else
+    status 401
+    erb :"/errors/401"
+  end
 end
 
 put '/auctions/:id' do
