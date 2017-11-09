@@ -3,7 +3,7 @@ class CreateBids < ActiveRecord::Migration
     create_table :bids do |t|
       t.belongs_to :user
       t.belongs_to :auction
-      t.decimal :bid_amount, null: false #Read is good to use decimal for monetary value. Thoughts?
+      t.string :bid_amount, null: false
 
       t.timestamps
     end
