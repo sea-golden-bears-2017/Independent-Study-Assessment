@@ -28,13 +28,15 @@
             <li>|</li>
             <li><a href="/users/new">Register</a></li>
           <% else %>
-            <li><a href="/users/<%= session[:user_id] %>">User Show</a></li>
+            <li><a href="/users/<%= session[:user_id] %>">My Account</a></li>
             <li>|</li>
           <li> <%= erb :'/sessions/_delete' %> </li>
           <% end %>
       </ul>
     </nav>
-
+        <div class="errors-box">
+          <%= erb :'/_errors' %>
+        </div>
   <%= yield %>
 </body>
 </html>

@@ -6,7 +6,6 @@ post '/sessions' do
   user = User.find_by_email(params[:email])
   if user && user.password == params[:password]
     session[:user_id] = user.id
-    # @messages = ["Hello, #{user.username}!"]
     redirect '/'
   else
     @errors = ['Incorrect username or password.']

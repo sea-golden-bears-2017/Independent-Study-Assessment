@@ -7,11 +7,9 @@ post '/users' do
   user.password = params[:password]
   if user.save
     session[:user_id] = user.id
-    @messages = ["Hello, #{user.username}!"]
     redirect '/'
   else
     @errors = user.errors.full_messages
-    # p @errors
     erb :'/users/new'
   end
 end

@@ -30,6 +30,7 @@ post '/auctions' do
     @user.auctions << @auction
     redirect :"/users/#{@user.id}"
   else
+     @errors = @auction.errors.full_messages
     erb :"auctions/new"
   end
 end
