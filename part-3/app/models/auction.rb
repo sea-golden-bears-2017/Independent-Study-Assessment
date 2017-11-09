@@ -1,5 +1,7 @@
 class Auction < ActiveRecord::Base
   belongs_to :user
+  has_many :bids
+
   validates :name, :condition, :description, :start, :end, presence: true
 
 
