@@ -23,8 +23,14 @@
     <h1>DBC Auction</h1>
     <nav>
       <ul>
-          <li><li><a href="/sessions/new">login</a></li>
-          <li><a href="/users/new">register</a></li></li>
+          <% if session[:user_id].nil? %>
+          <li><li><a href="/sessions/new">Login</a></li>
+          <li><a href="/users/new">Register</a></li></li>
+          <% else %>
+          <% User.find(session[:user_id]).username %>
+          <li>Welcome <%= User.find(session[:user_id]).username %> </li>
+          <li> <%= erb :'/sessions/_delete' %> </li>
+          <% end %>
       </ul>
     </nav>
 
