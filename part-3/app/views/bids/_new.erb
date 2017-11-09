@@ -1,0 +1,9 @@
+
+<h2>Biddddd</h2>
+<div class="bid-form">
+  <form class="bid-form" action="/bids" method="post">
+    <input type="hidden" name="auction_id" value=' <%= @auction.id %> '>
+    <input type="text" name="bid_amount" placeholder="Place a bid for this item.">
+    <input type="submit" value="Place Bid">
+  </form>
+</div>

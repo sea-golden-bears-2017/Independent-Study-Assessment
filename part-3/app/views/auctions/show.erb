@@ -1,0 +1,24 @@
+<h3> <%= @auction.name %> </h3>
+<p>Condition: <%= @auction.condition  %></p>
+<p>Description: <%= @auction.description  %></p>
+<p>End Time: <%= @auction.end_time  %></p>
+
+<% if session[:user_id] %>
+  <% if @auction.bids.find_by(user_id: session[:id]) %>
+    You Bid <%= @auction.bids.find_by(user_id: session[:id]).bid_amount %>
+  <% else %>
+    <%= erb :'/bids/_new', locals: {auction: @auction, errors: @errors} %>
+  <% end %>
+<% end %>
+
+
+<h3>Bids:</h3>
+
+<% if @bids %>
+  <ul>
+    <% @bids.each do |bid| %>
+      <li> Bidder: <%= bid.user.username %> - Current Bid: <%= bid.bid_amount %> </li>
+    <% end %>
+  </ul>
+
+<% end %>

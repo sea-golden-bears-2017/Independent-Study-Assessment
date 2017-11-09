@@ -6,12 +6,20 @@ end
 post "/posts" do
   @post = Post.new(params[:post])
 
-  if @post.save
-    redirect "posts/#{@post.id}"
+  if request.xhr?
+    if @post.save
+      erb :"posts/_post", {locals: { post: @post }, layout: false }
+    end
   else
-    erb :"posts/new"
+    if @post.save
+      redirect "posts/#{@post.id}"
+    else
+      @errors = @post.errors.values.flatten
+      erb :"posts/new"
+    end
   end
 end
+
 
 get "/posts/new" do
   @post = Post.new
@@ -26,5 +34,11 @@ end
 put "/posts/:id/like" do
   @post = Post.find(params[:id])
   @post.increment!(:likes_count)
-  redirect "/posts/#{@post.id}"
+  if request.xhr?
+    erb :"posts/_post", locals: {post: @post}, layout: false
+    # content_type "application/json"
+    # post.likes_count.to_json
+  else
+    redirect "/posts/#{@post.id}"
+  end
 end
