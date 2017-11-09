@@ -1,6 +1,11 @@
-get 'auctions' do
+get '/auctions' do
   @auctions = Auction.all
-  erb :"/index"
+  erb :"/auctions/index"
+end
+
+get '/auctions/:id' do
+   @auction = Auction.find(params[:id])
+   erb :"auctions/show"
 end
 
 get '/auctions/new' do

@@ -1,0 +1,14 @@
+<div class="container">
+<h1>Current Auctions:</h1>
+<ul>
+<% @auctions.each do |auction| %>
+  <li>
+    <div>
+      <h3><a href="/auctions/<%=auction.id%>"><%= auction.name %></a> -offered by: <%= auction.user.username %></h3>
+      <p> Start Time: <%= auction.start %> End Time: <%= auction.end  %></p>
+    </div>
+  </li>
+<% end %>
+</ul>
+
+</div>
