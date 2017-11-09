@@ -20,15 +20,16 @@
 
 <body>
 
-    <h1>DBC Auction</h1>
+    <h2><a href="/">DBC Auction</a></h2>
     <nav>
       <ul>
           <% if session[:user_id].nil? %>
-          <li><li><a href="/sessions/new">Login</a></li>
-          <li><a href="/users/new">Register</a></li></li>
+            <li><li><a href="/sessions/new">Login</a></li>
+            <li>|</li>
+            <li><a href="/users/new">Register</a></li>
           <% else %>
-          <% User.find(session[:user_id]).username %>
-          <li>Welcome <%= User.find(session[:user_id]).username %> </li>
+            <li><a href="/users/<%= session[:user_id] %>">User Show</a></li>
+            <li>|</li>
           <li> <%= erb :'/sessions/_delete' %> </li>
           <% end %>
       </ul>
