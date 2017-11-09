@@ -4,3 +4,19 @@
       <li><a href="/auctions/new">Add an Auction</a> </li>
     </ul>
 </nav>
+<div class="auction-display">
+<h2>Your Auction Items</h2>
+  <ul>
+    <% @user.auctions.each do | auction | %>
+    <li>
+      <a href="/auctions/<%= auction.id %>"><%= auction.name %></a>
+      <% if session[:id] == @user.id %>
+        <a href="/auctions/<%= auction.id %>/edit">Edit</a>
+        <form class="delete-post" action="/auctions/<%= auction.id %>" method="post">
+          <input type="hidden" name="_method" value="delete">
+          <input type="submit" name="submit" value="Delete">
+        </form>
+      <% end %>
+    </li>
+    <% end %>
+  </ul>
