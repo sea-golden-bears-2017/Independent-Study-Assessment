@@ -30,3 +30,9 @@ put '/auctions/:id' do
   @auction.update(params[:auction])
   redirect "/users/#{@user.id}"
 end
+
+delete '/auctions/:id' do
+  @auction = Auction.find(params[:id])
+  @auction.destroy
+  redirect "/users/#{@auction.user.id}"
+end
